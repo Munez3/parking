@@ -1,0 +1,132 @@
+body{
+  font-family: $openSans;
+  font-weight: 400;
+  font-size: 14px;
+  color: $grayDark;
+}
+
+h1, h2, h3{
+  font-weight: 300;
+}
+
+h1{
+  font-size: 30px;
+  @include media($breakpointMd){
+    font-size: 40px;
+  }
+  @include media($breakpointLg){
+    font-size: 50px;
+  }
+}
+
+h2{
+  font-size: 26px;
+  @include media($breakpointMd){
+    font-size: 36px;
+  }
+  @include media($breakpointLg){
+    font-size: 50px;
+  }
+}
+
+h3{
+  font-size: 20px;
+  @include media($breakpointMd){
+    font-size: 30px;
+  }
+  @include media($breakpointLg){
+    font-size: 44px;
+  }
+}
+
+h4{
+  font-size: 18px;
+  @include media($breakpointLg){
+    font-size: 22px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+
+p{
+  margin: 1em 0;
+  line-height: 1.5em;
+}
+
+strong{
+  font-weight: 600;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+
+  &.side{
+    height: 200px;
+    @include media($breakpointXs){
+      height: 250px;
+    }
+    @include media($breakpointMd){
+      height: 100%;
+    }
+  }
+}
+
+input, textarea{
+  margin: 3px 0;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  border: 1px solid #b7b7b7;
+  box-sizing: border-box;
+  font-family: $openSans;
+  color: $grayDark;
+
+  &:focus{
+    outline: 0;
+    border-color: #a6c8ff;
+  }
+}
+
+textarea{
+  height: 122px;
+  resize: none;
+}
+
+button{
+  margin-top: 20px;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  &:focus{
+    outline: 0;
+  }
+}
+
+span.wpcf7-not-valid-tip{
+  display: none;
+}
+
+.wpcf7-not-valid{
+  border-color: #f00;
+}
+
+div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpcf7-mail-sent-ok{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 0;
+}

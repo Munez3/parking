@@ -1,0 +1,219 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid $gray;
+  z-index: 999;
+}
+
+.logo{
+  float: left;
+  padding: 10px;
+  width: 170px;
+  @include media($breakpointLg){
+    padding: 10px 20px;
+    width: 230px;
+  }
+
+  &__header{
+    line-height: 0;
+  }
+}
+
+.burger{
+  float: right;
+  margin-top: 9px;
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  @include media($breakpointMd){
+    display: none;
+  }
+
+  &__bar{
+    position: relative;
+    margin-top: 12px;
+    width: 100%;
+    height: 2px;
+    background-color: $green;
+    transition: 300ms ease-out;
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $green;
+      transition: 300ms ease-out;
+    }
+    &:before{
+      top: -5px;
+    }
+    &:after{
+      bottom: -5px;
+    }
+  }
+
+  &--active &__bar{
+    transform: translateY(5px);
+    &:before{
+      transform: translateY(5px);
+    }
+    &:after{
+      transform: translateY(-5px);
+    }
+  }
+}
+
+
+.navbar{
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  max-height: 0;
+  background-color: #fff;
+  border-bottom: 1px solid $gray;
+  overflow: hidden;
+  transition: 400ms ease-out;
+  @include media($breakpointMd){
+    position: static;
+    max-height: none;
+    border-bottom: 0;
+    overflow: visible;
+  }
+
+  &--active{
+    max-height: 480px;
+  }
+}
+
+.nav{
+  @include media($breakpointMd){
+    float: left;
+  }
+  li{
+    @include media($breakpointMd){
+      float: left;
+      border-left: 1px solid $gray;
+    }
+  }
+
+  a{
+    padding: 13px 10px;
+    display: block;
+    font-weight: 300;
+    text-align: center;
+    @include media($breakpointLg){
+      padding: 18px 15px;
+      font-size: 16px;
+      transition: 200ms;
+      &:hover{
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+    @include media($breakpointXl){
+      padding: 17px 30px;
+      font-size: 18px;
+    }
+  }
+
+  &__red a{
+    background-color: $red;
+    color: #fff;
+    box-sizing: border-box;
+    @include media($breakpointXl){
+      position: relative;
+      margin: 0 7px;
+      padding-left: 23px;
+      padding-right: 23px;
+      box-shadow: 0 0 0px 7px $red;
+      &:hover{
+        background-color: #fff;
+        color: $red;
+      }
+    }
+
+  }
+}
+
+.side-nav{
+  @include media($breakpointMd){
+    float: right;
+  }
+
+  li{
+    float: left;
+    @include media($breakpointMd){
+      border-left: 1px solid $gray;
+    }
+  }
+
+  &__link{
+    padding: 16px 10px;
+    display: block;
+    font-size: 12px;
+    @include media($breakpointLg){
+      padding: 19px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 200ms;
+      &:hover{
+        color: $blue;
+      }
+    }
+    @include media($breakpointXl){
+      padding: 19px 15px;
+    }
+  }
+
+  &__link--contact{
+    padding: 10px 5px;
+    background-color: $blue;
+    @include media($breakpointLg){
+      padding: 15px 15px 16px;
+    }
+    span{
+      display: inline-block;
+      @include sprite($header);
+    }
+  }
+}
+
+
+.second-nav{
+  @include media($breakpointMd){
+    clear: both;
+    border-top: 1px solid $gray;
+  }
+
+  li{
+    @include media($breakpointMd){
+      float: left;
+      width: calc(1/3 * 100%);
+    }
+    @include media($breakpointLg){
+      width: calc(1/3 * 1170px);
+    }
+  }
+
+  a{
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    transition: 200ms;
+    @include media($breakpointLg){
+      font-size: 20px;
+    }
+
+    &:hover{
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}
