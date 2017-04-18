@@ -3,4 +3,37 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+ $breakpointXs: 600px;
+ $breakpointSm: 768px;
+ $breakpointMd: 992px;
+ $breakpointLg: 1200px;
+ $breakpointXl: 1500px;
+
+ $green: #c2d24d;
+ $blue: #1b89d4;
+ $red: #ef3e40;
+ $gray: #d7d7d7;
+ $grayDark: #5c5c5c;
+
+ $tableBackground: #e1e1e1;
+ $tableArrow: #959595;
+ $tableBorder: #d0d0d0;
+
+ $openSans: 'Open Sans', sans-serif;
+
+ @mixin media($width){
+  @media screen and (min-width: $width){
+    @content;
+  }
+ }
+
+
+ @import "compass/reset";
+ @import 'sub/reset';
+ @import 'sub/layout';
+ @import 'sub/universal';
+ @import 'sub/header';
+ @import 'sub/slider';
+
+
+ div#__bs_notify__{display: none !important;}

@@ -1,0 +1,6 @@
+.slider{
+  background: no-repeat center;
+  @include media($breakpointLg){
+    height: 510px;
+  }
+}
