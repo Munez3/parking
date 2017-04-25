@@ -1,0 +1,35 @@
+.form{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  &__col{
+    margin-top: 15px;
+  }
+  @include media($breakpointSm){
+    &__col{
+      &:first-child{
+        padding-right: 20px;
+      }
+    }
+    &__col--btn{
+      float: right;
+      margin-top: 36px;
+      .btn{
+        padding: 15px 0;
+        width: 100%;
+      }
+    }
+  }
+  @include media($breakpointMd){
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-right: 30px;
+    &__col{
+      margin-top: 20px;
+    }
+    &__col--btn{
+      margin-top: 41px;
+    }
+  }
+  @include media($breakpointLg){
+  }
+}

@@ -1,0 +1,17 @@
+.faq{
+  background-color: $blue;
+
+  &__wrapper{
+    justify-content: space-around;
+  }
+
+  &__icon{
+    display: none;
+    @include media($breakpointLg){
+      display: block;
+      width: 152px;
+      height: 160px;
+      background: no-repeat center;
+    }
+  }
+}

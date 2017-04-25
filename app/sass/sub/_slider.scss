@@ -1,0 +1,28 @@
+.slider{
+  margin-top: 62px;
+  padding-top: 15px;
+  height: 250px;
+  background: no-repeat center;
+  background-size: cover;
+  color: #fff;
+  box-sizing: border-box;
+  @include media($breakpointMd){
+    margin-top: 0;
+    padding-top: 30px;
+    height: 400px;
+  }
+  @include media($breakpointLg){
+    padding-top: 50px;
+    height: 510px;
+  }
+
+  &__caption{
+    margin-top: 10px;
+    @include media($breakpointMd){
+      font-size: 24px;
+    }
+    @include media($breakpointLg){
+      font-size: 40px;
+    }
+  }
+}

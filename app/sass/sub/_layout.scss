@@ -111,8 +111,6 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-
-    &--baseline{align-items: baseline;}
   }
 
   .stretchbox-md{
@@ -177,5 +175,16 @@
 }
 
 .text-bold{
-  font-weight: 600;
+  font-weight: 700;
+}
+.text-normal{
+  font-weight: 400;
+}
+
+
+.image{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
 }

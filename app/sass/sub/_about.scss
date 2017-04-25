@@ -1,0 +1,15 @@
+.adventage{
+  background-color: $blueDark;
+
+  &__item{
+    padding: 0 30px;
+    font-size: 16px;
+  }
+
+  &__icon{
+    margin: 20px auto;
+    width: 112px;
+    height: 90px;
+    background: no-repeat center;
+  }
+}
