@@ -97,6 +97,10 @@
     @include media($breakpointMd){
       width: calc(50% - 15px);
       margin-right: 30px;
+      &.flexbox--nd{
+        margin-right: 0;
+        margin-left: 30px;
+      }
       &:last-child{
         margin-right: 0;
       }
@@ -108,5 +112,14 @@
   @include media($breakpointMd){
     padding-left: 20px;
     border-left: 1px solid $gray;
+  }
+}
+
+.banner{
+  padding: 20px 0;
+  background-color: $blue;
+  color: #fff;
+  @include media($breakpointMd){
+    padding: 40px 0;
   }
 }

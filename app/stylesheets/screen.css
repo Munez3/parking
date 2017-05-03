@@ -615,6 +615,10 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
     width: calc(50% - 15px);
     margin-right: 30px;
   }
+  .section__col-6.flexbox--nd {
+    margin-right: 0;
+    margin-left: 30px;
+  }
   .section__col-6:last-child {
     margin-right: 0;
   }
@@ -624,6 +628,17 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   .vertical-line {
     padding-left: 20px;
     border-left: 1px solid #e1e1e1;
+  }
+}
+
+.banner {
+  padding: 20px 0;
+  background-color: #009fe3;
+  color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 40px 0;
   }
 }
 
@@ -940,6 +955,10 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   .price__value {
     font-size: 26px;
   }
+}
+
+.about__row {
+  margin: 40px 0;
 }
 
 .adventage {
