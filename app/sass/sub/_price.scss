@@ -27,10 +27,36 @@
     }
     @include media($breakpointMd){
       margin-top: 20px;
-      margin-right: 20px;
-      width: calc(20% - 16px);
+      margin-right: 20.25px;
+      width: calc(11.1111% - 18px);
       font-size: 16px;
       font-weight: 800;
+      &:nth-child(2n), &:nth-child(4n){
+        margin-right: 20.25px;
+      }
+      &:nth-child(9n){
+        margin-right: 0;
+      }
+
+      &--wide{
+        width: calc(33.3333% - 18px);
+        margin-right: 0 !important;
+      }
+
+      &--full{
+        margin-top: 39px;
+      }
+    }
+
+    &--full{
+      width: 100%;
+    }
+  }
+
+  &--small &__item{
+    @include media($breakpointMd){
+      margin-right: 20px;
+      width: calc(20% - 16px);
       &:nth-child(2n), &:nth-child(4n){
         margin-right: 20px;
       }
@@ -40,14 +66,8 @@
 
       &--wide{
         width: calc(40% - 16px);
-        margin-right: 0;
-      }
-
-      &--full{
-        margin-top: 39px;
       }
     }
-
     &--full{
       width: 100%;
     }

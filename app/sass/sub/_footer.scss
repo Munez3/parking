@@ -22,6 +22,10 @@
       margin-top: -80px;
     }
   }
+
+  &--contact{
+    padding: 8px 0;
+  }
 }
 
 .credits{
@@ -34,7 +38,11 @@
     border-left: 1px solid $blue;
   }
 
-  &__logo{
+  &__author{
     vertical-align: middle;
+  }
+
+  &__logo{
+    width: 118px;
   }
 }

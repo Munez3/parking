@@ -1,14 +1,13 @@
 .form{
   margin-top: 10px;
   margin-bottom: 30px;
+
   &__col{
     margin-top: 15px;
   }
   @include media($breakpointSm){
-    &__col{
-      &:first-child{
-        padding-right: 20px;
-      }
+    &__col:first-child:not(&__col--no-pad){
+      padding-right: 20px;
     }
     &__col--btn{
       float: right;
@@ -23,8 +22,18 @@
     margin-top: 20px;
     margin-bottom: 0;
     padding-right: 30px;
+    &--full-width{
+      margin-top: 0;
+      padding-right: 0;
+    }
     &__col{
       margin-top: 20px;
+    }
+    &__col--no-pad{
+      padding-right: 20px;
+    }
+    &__col--big{
+      margin-top: 40px;
     }
     &__col--btn{
       margin-top: 41px;

@@ -13,6 +13,9 @@
   @include media($breakpointMd){
     margin-top: 50px;
     margin-bottom: 50px;
+    &--navbar{
+      margin-top: 106px;
+    }
   }
   @include media($breakpointLg){
     margin-top: 70px;
@@ -116,10 +119,12 @@
 }
 
 .banner{
+  margin-top: 62px;
   padding: 20px 0;
   background-color: $blue;
   color: #fff;
   @include media($breakpointMd){
+    margin-top: 0;
     padding: 40px 0;
   }
 }

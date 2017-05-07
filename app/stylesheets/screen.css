@@ -156,7 +156,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
-  height: 122px;
+  height: 140px;
   resize: none;
 }
 
@@ -531,6 +531,9 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .mtb-70--navbar {
+    margin-top: 106px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .mtb-70 {
@@ -632,12 +635,14 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
 }
 
 .banner {
+  margin-top: 62px;
   padding: 20px 0;
   background-color: #009fe3;
   color: #fff;
 }
 @media screen and (min-width: 992px) {
   .banner {
+    margin-top: 0;
     padding: 40px 0;
   }
 }
@@ -854,7 +859,7 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   margin-top: 15px;
 }
 @media screen and (min-width: 768px) {
-  .form__col:first-child {
+  .form__col:first-child:not(.form__col--no-pad) {
     padding-right: 20px;
   }
   .form__col--btn {
@@ -872,8 +877,18 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
     margin-bottom: 0;
     padding-right: 30px;
   }
+  .form--full-width {
+    margin-top: 0;
+    padding-right: 0;
+  }
   .form__col {
     margin-top: 20px;
+  }
+  .form__col--no-pad {
+    padding-right: 20px;
+  }
+  .form__col--big {
+    margin-top: 40px;
   }
   .form__col--btn {
     margin-top: 41px;
@@ -914,26 +929,44 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
 @media screen and (min-width: 992px) {
   .price__item {
     margin-top: 20px;
-    margin-right: 20px;
-    width: calc(20% - 16px);
+    margin-right: 20.25px;
+    width: calc(11.1111% - 18px);
     font-size: 16px;
     font-weight: 800;
   }
   .price__item:nth-child(2n), .price__item:nth-child(4n) {
-    margin-right: 20px;
+    margin-right: 20.25px;
   }
-  .price__item:nth-child(5n) {
+  .price__item:nth-child(9n) {
     margin-right: 0;
   }
   .price__item--wide {
-    width: calc(40% - 16px);
-    margin-right: 0;
+    width: calc(33.3333% - 18px);
+    margin-right: 0 !important;
   }
   .price__item--full {
     margin-top: 39px;
   }
 }
 .price__item--full {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .price--small .price__item {
+    margin-right: 20px;
+    width: calc(20% - 16px);
+  }
+  .price--small .price__item:nth-child(2n), .price--small .price__item:nth-child(4n) {
+    margin-right: 20px;
+  }
+  .price--small .price__item:nth-child(5n) {
+    margin-right: 0;
+  }
+  .price--small .price__item--wide {
+    width: calc(40% - 16px);
+  }
+}
+.price--small .price__item--full {
   width: 100%;
 }
 .price__value {
@@ -975,22 +1008,50 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   background: no-repeat center;
 }
 
-.faq {
+.faq, .place {
   background-color: #009fe3;
 }
-.faq__wrapper {
+.faq__wrapper, .place__wrapper {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.faq__icon {
+.faq__icon, .place__icon {
   display: none;
 }
 @media screen and (min-width: 1200px) {
-  .faq__icon {
+  .faq__icon, .place__icon {
     display: block;
     width: 152px;
     height: 160px;
     background: no-repeat center;
+  }
+}
+
+.place {
+  background-color: #fff;
+}
+
+.contact__item {
+  padding-left: 90px;
+  min-height: 60px;
+  background: no-repeat left center;
+  font-weight: 700;
+}
+.contact__form {
+  background-color: #009fe3;
+  color: #fff;
+}
+.contact__form input, .contact__form textarea {
+  background-color: transparent;
+  border-color: #2b364b;
+}
+.contact__form button {
+  margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  .contact__map {
+    height: 275px;
+    background-color: #ccc;
   }
 }
 
@@ -1018,6 +1079,9 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
     margin-top: -80px;
   }
 }
+.footer--contact {
+  padding: 8px 0;
+}
 
 .credits {
   font-size: 10px;
@@ -1028,8 +1092,11 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   display: inline-block;
   border-left: 1px solid #009fe3;
 }
-.credits__logo {
+.credits__author {
   vertical-align: middle;
+}
+.credits__logo {
+  width: 118px;
 }
 
 div#__bs_notify__ {
