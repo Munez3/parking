@@ -1,8 +1,10 @@
 .map{
+  height: 400px;
   background-color: #ccc;
   &--home{
+    height: 250px;
     @include media($breakpointLg){
-      height: 530px;
+      height: 100%;
     }
   }
 }
