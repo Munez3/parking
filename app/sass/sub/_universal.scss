@@ -130,3 +130,34 @@
     padding: 40px 0;
   }
 }
+
+.reference{
+  background-color: #fff;
+
+  &--blue{
+    background-color: $blue;
+  }
+
+  &--home &__icon{
+    margin: 0;
+  }
+
+  &__wrapper{
+    justify-content: space-around;
+  }
+
+  &__icon{
+    display: none;
+    @include media($breakpointLg){
+      margin: 0 auto;
+      display: block;
+      width: 152px;
+      height: 160px;
+      background: no-repeat center;
+    }
+  }
+
+  &__btn{
+    margin: 15px 0;
+  }
+}

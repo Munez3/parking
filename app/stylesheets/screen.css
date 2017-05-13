@@ -94,7 +94,7 @@ h2 {
 }
 @media screen and (min-width: 1200px) {
   h2 {
-    font-size: 50px;
+    font-size: 48px;
   }
 }
 
@@ -651,6 +651,35 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   }
 }
 
+.reference {
+  background-color: #fff;
+}
+.reference--blue {
+  background-color: #009fe3;
+}
+.reference--home .reference__icon {
+  margin: 0;
+}
+.reference__wrapper {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.reference__icon {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .reference__icon {
+    margin: 0 auto;
+    display: block;
+    width: 152px;
+    height: 160px;
+    background: no-repeat center;
+  }
+}
+.reference__btn {
+  margin: 15px 0;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -659,6 +688,7 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #009fe3;
+  z-index: 9999;
 }
 @media screen and (min-width: 992px) {
   .header {
@@ -907,6 +937,14 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
             justify-content: space-between;
   }
 }
+@media screen and (min-width: 992px) {
+  .price {
+    margin-top: 0;
+  }
+}
+.price__list {
+  margin-top: 20px;
+}
 .price__item {
   float: left;
   margin-top: 10px;
@@ -1012,31 +1050,6 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   background: no-repeat center;
 }
 
-.faq--blue, .place {
-  background-color: #009fe3;
-}
-.faq--home {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.faq--home .faq__icon, .faq--home .place__icon {
-  margin-bottom: 20px;
-}
-.faq__wrapper, .place__wrapper {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.faq__icon, .place__icon {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .faq__icon, .place__icon {
-    display: block;
-    width: 152px;
-    height: 160px;
-    background: no-repeat center;
-  }
-}
 .faq__rounded-frame {
   border: 2px solid #e1e1e1;
   border-radius: 15px;
@@ -1046,6 +1059,7 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   border-color: #009fe3;
 }
 .faq__item {
+  padding: 15px;
   padding-right: 40px;
   position: relative;
   font-weight: 600;
@@ -1082,17 +1096,21 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
   border-color: #fff;
 }
 .faq__answer {
-  padding: 30px;
+  padding: 15px;
   display: none;
+}
+.faq__answer p {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .faq__answer {
+    padding: 30px;
+  }
 }
 @media screen and (min-width: 992px) {
   .faq__header {
     font-size: 30px;
   }
-}
-
-.place {
-  background-color: #fff;
 }
 
 .contact__item {
@@ -1148,7 +1166,13 @@ div.wpcf7-response-output.wpcf7-validation-errors, div.wpcf7-response-output.wpc
 }
 
 .credits {
+  margin-top: 10px;
   font-size: 10px;
+}
+@media screen and (min-width: 992px) {
+  .credits {
+    margin: 0;
+  }
 }
 .credits__blue {
   margin-left: 10px;

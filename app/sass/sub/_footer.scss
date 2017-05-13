@@ -29,7 +29,11 @@
 }
 
 .credits{
+  margin-top: 10px;
   font-size: 10px;
+  @include media($breakpointMd){
+    margin: 0;
+  }
 
   &__blue{
     margin-left: 10px;

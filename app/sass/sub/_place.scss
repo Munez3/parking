@@ -1,12 +1,1 @@
-.place{
-  @extend .faq--blue;
-  background-color: #fff;
 
-  &__wrapper{
-    @extend .faq__wrapper;
-  }
-
-  &__icon{
-    @extend .faq__icon;
-  }
-}

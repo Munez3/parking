@@ -6,6 +6,7 @@
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid $blue;
+  z-index: 9999;
   @include media($breakpointMd){
     position: static;
     padding: 20px 0;
