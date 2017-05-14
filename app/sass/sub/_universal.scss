@@ -161,3 +161,13 @@
     margin: 15px 0;
   }
 }
+
+.dot{
+  margin: 0 10px;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: darken($gray, 20);
+  vertical-align: middle;
+}

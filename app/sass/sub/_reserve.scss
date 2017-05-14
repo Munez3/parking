@@ -1,0 +1,12 @@
+.reserve{
+
+  &__underline{
+    border-bottom: 1px solid $gray;
+  }
+
+  &__header{
+    @include media($breakpointMd){
+      font-size: 30px;
+    }
+  }
+}
