@@ -65,6 +65,10 @@ p{
   }
 }
 
+strong{
+  font-weight: 600;
+}
+
 input, textarea{
   padding: 14px 10px;
   display: block;
@@ -79,6 +83,32 @@ input, textarea{
     border-color: $blueDark;
   }
 }
+
+input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"] + label{
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    border: 1px solid $gray;
+  }
+}
+input[type="checkbox"]:checked + label{
+  &:before{
+    background-color: $gray;
+  }
+}
+
 
 textarea{
   height: 140px;

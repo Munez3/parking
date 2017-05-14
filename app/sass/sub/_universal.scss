@@ -1,6 +1,14 @@
 .map{
-  height: 400px;
+  height: 250px;
   background-color: #ccc;
+
+  @include media($breakpointMd){
+    height: 300px;
+  }
+  @include media($breakpointLg){
+    height: 556px;
+  }
+
   &--home{
     height: 250px;
     @include media($breakpointLg){
@@ -132,7 +140,9 @@
 }
 
 .reference{
+  height: 100%;
   background-color: #fff;
+  box-sizing: border-box;
 
   &--blue{
     background-color: $blue;

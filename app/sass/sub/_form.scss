@@ -5,6 +5,22 @@
   &__col{
     margin-top: 15px;
   }
+
+  &__icon{
+    padding-right: 30px;
+    background: no-repeat right 10px center;
+  }
+
+  &__icon--calendar{
+    background-image: url('../images/calendar.png');
+  }
+  &__icon--clock{
+    background-image: url('../images/clock.png');
+  }
+  &__icon--car{
+    background-image: url('../images/car.png');
+  }
+
   @include media($breakpointSm){
     &__pad{
       padding-right: 20px;
